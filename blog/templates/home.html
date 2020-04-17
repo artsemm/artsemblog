@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="jumbotron main-page d-flex align-items-center min-vh-100">
+        <div class="container">
+            <h1 class='text-center'>Go to <a href={% url 'post_list' %}>blog</a></h1>
+            <p class='text-center'>Number of posts: {{ number_of_posts }}</p>
+        </div>
+    </div>
+{% endblock body %}
