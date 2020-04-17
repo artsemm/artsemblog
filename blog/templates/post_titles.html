@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>All titles</title>
+{% endblock head %}
+{% block body %}
+<div class="container">
+    <h1>All titles</h1>
+    <div class="row">
+        {% for post in posts %}
+                <div class="col-md-2">
+                    {{ post.created_on.date }}
+                </div>
+                <div class="col-md-10">
+                    <a href="{{ post.get_absolute_url }}">
+                    <p>{{ post.title }}</p>
+                    </a>
+                </div>
+        {% endfor %}
+    </div>
+
+</div> 
+{% endblock body %}
